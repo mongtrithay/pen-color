@@ -1,6 +1,10 @@
 // 2. URL Parameter: please get id from URL
-let id = 1;
-let url = ""; // please use a url from single pen from API document
+const param = window.location.search;
+const urlparams = new URLSearchParams(param);
+const ids = urlparams.get("id"); 
+
+let id = ids;
+let url = "https://pens-api.vercel.app/api/pens/1"; // please use a url from single pen from API document
 
 async function getPen() {
   // Fetch pen colors from API
